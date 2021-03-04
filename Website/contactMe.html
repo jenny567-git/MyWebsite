@@ -14,6 +14,8 @@
     <!-- custom css style -->
     <link rel="stylesheet" href="bootstrap/css/style.css">
 
+    <!-- custom js -->
+    <script src="bootstrap/js/scripts.js"></script>
     <title>Contact Me - Jenny Wong</title>
 </head>
 
@@ -113,29 +115,34 @@
     <!-- start of form -->
     <section class="form-section">
         <div class="container">
-            <form class="row-g3">
+            <form class="row-g3" onsubmit="return validation()">
                 <div class="col-md-6">
                     <label for="inputName" class="form-label">Full name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="name">
                 </div>
 
                 <div class="col-md-6">
                     <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control">
+                    <input type="email" class="form-control" id="email">
                 </div>
 
                 <div class="col-md-6">
                     <label for="inputSubject" class="form-label">Subject</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="subject">
                 </div>
 
                 <div class="col-md-12">
                     <label for="inputMessage" class="form-label">Message</label>
-                    <textarea class="form-control" cols="30" rows="5" placeholder="Write your message here"></textarea>
+                    <textarea id="message" class="form-control" cols="30" rows="5"
+                        placeholder="Write your message here"></textarea>
+                </div>
+
+                <div id="errorMessage" class="col-md-6 mt-4 mb-4">
                 </div>
 
                 <div class="col-auto pt-2">
                     <button type="submit" class="btn btn-primary mb-3">Send message</button>
+                    <a href="mailto:jennywong567@gmail.com?subject="></a>
                 </div>
             </form>
             <!-- end of form -->
